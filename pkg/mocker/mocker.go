@@ -153,6 +153,7 @@ func (g *Generator) setupImports() {
 }
 
 func (g *Generator) GenerateImports() {
+	g.p("HELLO")
 	g.p("import (")
 	g.in()
 	for path, pkg := range g.imports {
