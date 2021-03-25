@@ -125,6 +125,8 @@ func (g *Generator) Generate() error {
 
 func (g *Generator) setupImports() {
 	imports := g.pkg.Imports()
+	fmt.Println("in setupImports, setting imports := g.pkg.Imports()")
+	fmt.Println(imports)
 	sortedPaths := make([]string, len(imports), len(imports))
 	sortedPaths = append(sortedPaths, "sync")
 	i := 0
@@ -144,6 +146,8 @@ func (g *Generator) setupImports() {
 			i++
 		}
 		g.imports[path] = pkgName
+		fmt.Printf("%v %q", pkgName, path)
+		fmt.Println()
 		names[pkgName] = true
 	}
 }
