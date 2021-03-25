@@ -408,7 +408,7 @@ func (g *Generator) typeName(in string) string {
 	if out, ok := g.types[in]; ok {
 		return out
 	}
-	return g.c.Pre + in + g.c.Suf
+	return g.c.Pre + in + "Please" + g.c.Suf
 }
 
 func (g *Generator) p(format string, args ...interface{}) {
